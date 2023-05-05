@@ -3,6 +3,9 @@
 class Products {
 
     public $productname;
-    protected $price;
+    public $image;
+    public $price;
 
 }
+
+?>
