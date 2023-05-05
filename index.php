@@ -8,16 +8,20 @@ require_once __DIR__ . '/Models/Cat.php';
     $ciboCani->productname = "Cibo per cani";
     $ciboCani->price = 15;
     $ciboCani->image = "./images/R.jpg";
+    $ciboCani->type = "Cibo";
+
 
     $ciboGatti = new Cat();
     $ciboGatti->productname = "Cibo per gatti";
     $ciboGatti->price = 15;
     $ciboGatti->image = "./images/E.jpg";
+    $ciboGatti->type = "Cibo";
 
     $giocoCani = new Dog();
     $giocoCani->productname = "Gioco per cani";
     $giocoCani->price = 8;
     $giocoCani->image = "./images/O.jpg";
+    $giocoCani->type = "Giocattolo";
 
 ?>
 
@@ -41,19 +45,25 @@ require_once __DIR__ . '/Models/Cat.php';
             <div class="card">
                 <img class="product-image" src="<?php echo $ciboCani->image; ?>" />
                 <h4> <?php echo $ciboCani->productname; ?> </h4>
+                <h4> <?php echo $ciboCani->type; ?> </h4>
                 <h4> <?php echo $ciboCani->price . "€"; ?> </h4>
+                <span class="icon"> <?php echo $ciboCani->dogIcon; ?> </span>
             </div>
 
             <div class="card">
                 <img class="product-image" src="<?php echo $ciboGatti->image; ?>" />
                 <h4> <?php echo $ciboGatti->productname; ?> </h4>
+                <h4> <?php echo $ciboGatti->type; ?> </h4>
                 <h4> <?php echo $ciboGatti->price . "€"; ?> </h4>
+                <span class="icon"> <?php echo $ciboGatti->catIcon; ?> </span>
             </div>
 
             <div class="card">
                 <img class="product-image" src="<?php echo $giocoCani->image; ?>" />
                 <h4> <?php echo $giocoCani->productname; ?> </h4>
+                <h4> <?php echo $giocoCani->type; ?> </h4>
                 <h4> <?php echo $giocoCani->price . "€"; ?> </h4>
+                <span class="icon"> <?php echo $giocoCani->dogIcon; ?> </span>
             </div>
         </div>
     </main>
