@@ -1,13 +1,23 @@
 <?php
 
 require_once __DIR__ . '/Models/Products.php';
-/* require_once __DIR__ . '/Models/Dog.php'; */
-/* require_once __DIR__ . '/Models/Cat.php'; */
+require_once __DIR__ . '/Models/Dog.php'; 
+require_once __DIR__ . '/Models/Cat.php'; 
 
-    $ciboCani = new Products();
+    $ciboCani = new Dog();
     $ciboCani->productname = "Cibo per cani";
     $ciboCani->price = 15;
     $ciboCani->image = "./images/R.jpg";
+
+    $ciboGatti = new Cat();
+    $ciboGatti->productname = "Cibo per gatti";
+    $ciboGatti->price = 15;
+    $ciboGatti->image = "./images/E.jpg";
+
+    $giocoCani = new Dog();
+    $giocoCani->productname = "Gioco per cani";
+    $giocoCani->price = 8;
+    $giocoCani->image = "./images/O.jpg";
 
 ?>
 
@@ -32,6 +42,18 @@ require_once __DIR__ . '/Models/Products.php';
                 <img class="product-image" src="<?php echo $ciboCani->image; ?>" />
                 <h4> <?php echo $ciboCani->productname; ?> </h4>
                 <h4> <?php echo $ciboCani->price . "€"; ?> </h4>
+            </div>
+
+            <div class="card">
+                <img class="product-image" src="<?php echo $ciboGatti->image; ?>" />
+                <h4> <?php echo $ciboGatti->productname; ?> </h4>
+                <h4> <?php echo $ciboGatti->price . "€"; ?> </h4>
+            </div>
+
+            <div class="card">
+                <img class="product-image" src="<?php echo $giocoCani->image; ?>" />
+                <h4> <?php echo $giocoCani->productname; ?> </h4>
+                <h4> <?php echo $giocoCani->price . "€"; ?> </h4>
             </div>
         </div>
     </main>

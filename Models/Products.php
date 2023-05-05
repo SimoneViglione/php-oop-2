@@ -6,6 +6,7 @@ class Products {
     public $image;
     public $price;
 
+
 }
 
 ?>
