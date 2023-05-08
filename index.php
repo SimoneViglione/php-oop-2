@@ -9,6 +9,7 @@ require_once __DIR__ . '/Models/Cat.php';
     $ciboCani->price = 15;
     $ciboCani->image = "./images/R.jpg";
     $ciboCani->type = "Cibo";
+    $ciboCani->setCalories(130, 'kcal');
 
 
     $ciboGatti = new Cat();
@@ -16,6 +17,7 @@ require_once __DIR__ . '/Models/Cat.php';
     $ciboGatti->price = 15;
     $ciboGatti->image = "./images/E.jpg";
     $ciboGatti->type = "Cibo";
+    $ciboGatti->setCalories(100, 'kcal');
 
     $giocoCani = new Dog();
     $giocoCani->productname = "Gioco per cani";
@@ -39,14 +41,13 @@ require_once __DIR__ . '/Models/Cat.php';
 <body>
 
     <main>
-        <p> sto un po' male quindi mi sa che andrò un po' a rilento </p>
-
         <div class="container">
             <div class="card">
                 <img class="product-image" src="<?php echo $ciboCani->image; ?>" />
                 <h4> <?php echo $ciboCani->productname; ?> </h4>
                 <h4> <?php echo $ciboCani->type; ?> </h4>
                 <h4> <?php echo $ciboCani->price . "€"; ?> </h4>
+                <h4> <?php echo $ciboCani->getCalories(); ?> </h4>
                 <span class="icon"> <?php echo $ciboCani->dogIcon; ?> </span>
             </div>
 
@@ -55,6 +56,7 @@ require_once __DIR__ . '/Models/Cat.php';
                 <h4> <?php echo $ciboGatti->productname; ?> </h4>
                 <h4> <?php echo $ciboGatti->type; ?> </h4>
                 <h4> <?php echo $ciboGatti->price . "€"; ?> </h4>
+                <h4> <?php echo $ciboGatti->getCalories(); ?> </h4>
                 <span class="icon"> <?php echo $ciboGatti->catIcon; ?> </span>
             </div>
 
