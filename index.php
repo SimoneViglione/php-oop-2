@@ -11,6 +11,12 @@ require_once __DIR__ . '/Models/Cat.php';
     $ciboCani->type = "Cibo";
     $ciboCani->setCalories(130, 'kcal');
 
+    try {
+        $ciboCani->setPrice('ciao');
+      } catch (Exception $e) {
+        echo 'Errore: ' . $e->getMessage();
+      }
+
 
     $ciboGatti = new Cat();
     $ciboGatti->productname = "Cibo per gatti";
